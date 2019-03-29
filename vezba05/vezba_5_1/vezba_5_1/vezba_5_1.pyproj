@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>c6cf642b-91df-4c95-9d7f-c5befe79cf51</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>vezba_5_1.py</StartupFile>
+    <StartupFile>class_example.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="class_example.py" />
     <Compile Include="vezba_5_1.py" />
   </ItemGroup>
   <PropertyGroup>
