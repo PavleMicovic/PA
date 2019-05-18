@@ -80,8 +80,10 @@ def print_path(G, s, v):
         print_path(G, s, v.p)
         print(v.name)
 time=None
+l=[]
 def DFS(G):
     global time
+    global l
     for i in G:
         i.color=VertexColor.WHITE
         i.p=None
@@ -89,6 +91,20 @@ def DFS(G):
     for i in G:
         if(i.color==VertexColor.WHITE):
             DFS_visit(G, i)
+def DFS_visit(G, u):
+    global time
+    global l
+    time=time+1
+    u.d=time
+    u.color=VertexColor.GRAY
+    for i in u.connections:
+        if i.color==VertexColor.WHITE:
+            i.p=u
+            DFS_visit(G, i)
+    u.color=VertexColor.BLACK
+    time=time+1
+    u.f=time
+    l.append(u)
 v1 = Vertex(connections=[], name=1)
 v2 = Vertex(connections=[], name=2)
 v3=Vertex(name=3, connections=[])
@@ -125,12 +141,65 @@ add_to_list(v5, v4)
 #susedi(v3)
 #veze(v3)
 #veze(v2)
-G=[v1, v2, v3, v4, v5]
-BFS(G, v3)
-print("Putanja od 3 do 1:")
-print_path(G, v3, v1)
-print("\nPutanja od 3 do 5:")
-print_path(G, v3, v5)
+#G=[v1, v2, v3, v4, v5]
+#BFS(G, v3)
+#print("Putanja od 3 do 1:")
+#print_path(G, v3, v1)
+#print("\nPutanja od 3 do 5:")
+#print_path(G, v3, v5)
+
+#----------------------------------------------------
+v_ushorts = Vertex(connections=[], name="undershorts")
+v_pants = Vertex(connections=[], name="pants")
+v_belt=Vertex(name="belt", connections=[])
+v_socks=Vertex(name="socks", connections=[])
+v_shoes=Vertex(name="shoes", connections=[])
+v_watch=Vertex(name="watch", connections=[])
+v_shirt=Vertex(name="shirt", connections=[])
+v_tie=Vertex(name="tie", connections=[])
+v_jacket=Vertex(name="jacket", connections=[])
+
+
+add_to_list(v_ushorts, v_pants)
+add_to_list(v_ushorts, v_shoes)
+
+add_to_list(v_pants, v_belt)
+add_to_list(v_pants, v_shoes)
+
+
+add_to_list(v_belt, v_jacket)
+
+add_to_list(v_shirt, v_belt)
+add_to_list(v_shirt, v_tie)
+
+add_to_list(v_tie, v_jacket)
+
+add_to_list(v_socks, v_shoes)
+
+G1=[v_shirt, v_tie, v_jacket, v_belt, v_watch, v_ushorts, v_pants, v_shoes, v_socks]
+#veze(v_ushorts)
+#veze(v_belt)
+#veze(v_shirt)
+#veze(v_tie)
+#veze(v_jacket)
+#veze(v_socks)
+#veze(v_shoes)
+#veze(v_watch)
+
+DFS(G1)
+l.reverse()
+for i in l:
+    if i.p!=None: 
+        a=i.p.name 
+    else: 
+        a=i.p
+    print(i.name, ", ", i.f, ", ", i.d, ", ", a)
+
+
+
+
+
+
 
 
 

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonApplication1", "PythonApplication1\PythonApplication1.pyproj", "{A9E3E15B-CF83-4CB0-A37C-4D95EB46A0FC}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Dijkstra", "Dijkstra\Dijkstra.pyproj", "{DBB56859-72EA-48A4-804D-899EF50ACA61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +11,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A9E3E15B-CF83-4CB0-A37C-4D95EB46A0FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9E3E15B-CF83-4CB0-A37C-4D95EB46A0FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBB56859-72EA-48A4-804D-899EF50ACA61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBB56859-72EA-48A4-804D-899EF50ACA61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DE733FDC-FAD0-47D8-B6FD-184BEF43EC39}
+		SolutionGuid = {0D8AC3CE-C7BD-4F29-BDDF-B74FC8BDEDC4}
 	EndGlobalSection
 EndGlobal
