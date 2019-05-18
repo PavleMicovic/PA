@@ -11,7 +11,7 @@ class Vertex:
         self.adj=[]
         self.p=p
         self.d=d
-    #ove stvari moraju da budu tu da bi heapq znao kako da poredi nase objekte
+    #ove stvari moraju da budu tu da bi heapq znao po kojoj vrednosti da poredi nase objekte
     def __cmp__(self, otherVertex):
         return self.cmp(self.d, otherVertex.d)
 
