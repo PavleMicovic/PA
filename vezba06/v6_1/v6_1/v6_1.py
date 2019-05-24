@@ -93,6 +93,6 @@ while len(l)>1:
 print("\n")
 in_order_tree_walk(l[0])
 print("\n------------------------------------------------------------\n")
-n=15
+n=6
 s=generisanje_koda(l[0], n)
 print("Generisan kod:", s, "\nVrednost:", n)
